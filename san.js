@@ -20,13 +20,18 @@ async function a() {
     // console.log(data1);
     let x = await fetch(url)
     let data = await x.json()
-    console.log(data);
     const date = String(data.hourly.time[0])
     res.innerHTML = "Latitude : " + data.latitude + "<br>Longitude : " + data.longitude + "<br>weather : " + data.hourly.temperature_2m[0] + data.hourly_units.temperature_2m + "<br> Date: " + date.substr(0, 10)
 
     const weat = document.getElementById("weat")
-    weat.style.fontSize = (Math.round(Math.random() * 70))
-    weat.style.animationName = 'san'
-    weat.style.animationDuration = "3s"
+    weat.animate(
+        [
+            { fontSize: String(Math.round(Math.random() * 70)) + "px" },
+            { fontSize: String(Math.round(Math.random() * 70)) + "px" },
+        ],
+        {
+            duration: 3000,
+        }
+    );
 }
 
