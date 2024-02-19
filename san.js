@@ -22,7 +22,11 @@ async function a() {
     let data = await x.json()
     console.log(data);
     const date = String(data.hourly.time[0])
+    res.innerHTML = "Latitude : " + data.latitude + "<br>Longitude : " + data.longitude + "<br>weather : " + data.hourly.temperature_2m[0] + data.hourly_units.temperature_2m + "<br> Date: " + date.substr(0, 10)
 
-    res.innerHTML = "Latitude : " + data.latitude + ", Longitude : " + data.longitude + "<br>weather : " + data.hourly.temperature_2m[0] + data.hourly_units.temperature_2m + "<br> Date: " + date.substr(0, 10)
+    const weat = document.getElementById("weat")
+    weat.style.fontSize = (Math.round(Math.random() * 70))
+    weat.style.animationName = 'san'
+    weat.style.animationDuration = "3s"
 }
 
