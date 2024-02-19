@@ -1,0 +1,32 @@
+body {
+    font-family: fira code;
+}
+
+#d1 {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blueviolet;
+    /* filter: blur(3px); */
+    /* -webkit-filter: blur(8px); */
+}
+
+#d3 {
+    text-align: center;
+    filter: blur(10px);
+}
+
+#d2 {
+    text-align: center;
+    background-image: linear-gradient(black, black);
+    backdrop-filter: blur(3px);
+    height: 200px;
+    width: 400px;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+#butres {
+    margin: 1rem
+}
